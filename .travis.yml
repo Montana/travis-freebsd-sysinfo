@@ -1,0 +1,25 @@
+language: python
+install: skip
+os: freebsd
+
+jobs:
+  include:
+    - os: freebsd
+      script:
+        - uname -mrs
+        - freebsd-version
+        - sysctl -a hw.model
+        - sysctl -a | grep -i hw.*cpu
+        - getconf LONG_BIT
+        - dmesg | grep CPU
+        - dmesg | grep memory
+        - sysctl -a | less
+        - uptime 
+        - last -1 reboot
+        - last -1 shutdown
+        - swapinfo -k 
+        - pkg install dmidecode
+        - dmidecode
+        - dmidecode -t processor
+        - dmidecode -t memory
+        - dmidecode -t bios
