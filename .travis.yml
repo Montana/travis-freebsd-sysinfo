@@ -13,6 +13,5 @@ jobs:
         - getconf LONG_BIT
         - dmesg | grep CPU
         - dmesg | grep memory
-        - sysctl -a | less
         - cd src
         - clang armstrong.c
