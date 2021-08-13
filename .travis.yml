@@ -1,4 +1,4 @@
-language: python
+language: c
 install: skip
 os: freebsd
 
@@ -14,8 +14,5 @@ jobs:
         - dmesg | grep CPU
         - dmesg | grep memory
         - sysctl -a | less
-        - pkg install dmidecode
-        - dmidecode
-        - dmidecode -t processor
-        - dmidecode -t memory
-        - dmidecode -t bios
+        - cd src
+        - clang armstrong.c
