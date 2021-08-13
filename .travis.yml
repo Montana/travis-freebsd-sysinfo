@@ -2,7 +2,7 @@ language: c
 compiler:
   - clang
   - gcc
-install: ./autogen.sh
+install: chmod u+x ./autogen.sh
 
 jobs:
   include:
