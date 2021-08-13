@@ -1,3 +1,5 @@
+language: c
+# language: minimal 
 os: freebsd
 addons:
 pkg:
@@ -14,3 +16,5 @@ jobs:
         - dmesg | grep CPU
         - dmesg | grep memory
         - echo "FreeBSD sysinfo Travis repo by Montana Mendy"
+        - cd src
+        - tail -f armstrong.c 
