@@ -1,6 +1,8 @@
 language: c
-install: skip
-os: freebsd
+compiler:
+  - clang
+  - gcc
+install: ./autogen.sh
 
 jobs:
   include:
