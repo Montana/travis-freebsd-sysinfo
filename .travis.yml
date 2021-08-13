@@ -1,11 +1,10 @@
 os: freebsd
-language: c
-compiler:
-  - clang
-  
+addons:
+pkg:
+- llvm
+
 jobs:
   include:
-    - os: freebsd
       script:
         - uname -mrs
         - freebsd-version
