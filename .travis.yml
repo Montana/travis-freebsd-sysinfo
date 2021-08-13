@@ -2,8 +2,7 @@ language: c
 compiler:
   - clang
   - gcc
-install: chmod u+x ./autogen.sh
-
+  
 jobs:
   include:
     - os: freebsd
@@ -15,5 +14,4 @@ jobs:
         - getconf LONG_BIT
         - dmesg | grep CPU
         - dmesg | grep memory
-        - cd src
-        - clang armstrong.c
+        - echo "FreeBSD sysinfo Travis repo by Montana Mendy"
