@@ -14,9 +14,6 @@ jobs:
         - dmesg | grep CPU
         - dmesg | grep memory
         - sysctl -a | less
-        - uptime 
-        - last -1 reboot
-        - last -1 shutdown
         - swapinfo -k 
         - pkg install dmidecode
         - dmidecode
